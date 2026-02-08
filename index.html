@@ -91,6 +91,21 @@
             border-color: #2dd4bf;
             background: rgba(45, 212, 191, 0.05);
         }
+
+        .marquee-content {
+        display: inline-flex;
+        animation: marquee 15s linear infinite;
+}
+
+        @keyframes marquee {
+        0% {
+        transform: translateX(0);
+  }
+        100% {
+        transform: translateX(-50%);
+  }
+}
+
     </style>
 </head>
 
@@ -127,16 +142,28 @@
 </header>
 
 
-<div class="border-y border-slate-800 py-4 bg-[#0a0d12]">
-    <div class="flex flex-wrap justify-center gap-3 text-xs font-bold tracking-widest text-slate-500 uppercase">
-        <span>Computer Engineer</span> /
-        <span>Frontend Web Developer</span> /
-        <span>React</span> /
-         <span>HTML</span> /
-        <span>Tailwind CSS</span> /
-        <span>JavaScript</span> 
-    </div>
+<div class="marquee overflow-hidden border-y border-slate-800 py-4 bg-[#0a0d12]">
+  <div class="marquee-content whitespace-nowrap inline-flex gap-6">
+    <span>Computer Engineer</span> /
+    <span>Computer System</span>/
+    <span>Frontend Web Developer</span> /
+    <span>React</span> /
+    <span>HTML</span> /
+    <span>Tailwind CSS</span> /
+    <span>JavaScript</span>/
+    
+   
+    <span>Computer Engineer</span> /
+    <span>Computer System</span> /
+    <span>Frontend Web Developer</span> /
+    <span>React</span> /
+    <span>HTML</span> /
+    <span>Tailwind CSS</span> /
+    <span>JavaScript</span> /
+    
+  </div>
 </div>
+
 
 <section id="about" class="max-w-5xl mx-auto px-6 py-24">
     <h2 class="text-white text-4xl font-bold mb-12">About<span class="text-teal-400">.</span></h2>
@@ -144,21 +171,15 @@
     <div class="grid md:grid-cols-2 gap-12">
 
         <div class="h-80 bg-gradient-to-br from-teal-400 to-blue-500 rounded-sm flex items-center justify-center overflow-hidden" data-aos="zoom-in">
-            <img src="ss.png" alt="Shashi Shekhar Pathak" class="w-full h-full object-cover rounded-sm transition-transform duration-500 ease-in-out hover:scale-105">
+            <img src="pic.png" alt="Shashi Shekhar Pathak" class="w-full h-full object-cover rounded-sm transition-transform duration-500 ease-in-out hover:scale-105">
         </div>
 
         <div class="space-y-6" data-aos="fade-up">
     <p class="text-lg text-white font-medium">
-        Computer Engineer specializing in Front-End Development, building responsive web applications with React, JavaScript, and Tailwind CSS.
+       Motivated Computer Engineering graduate specializing in Front-End Development, with a strong foundation in ICT systems, web applications, APIs, databases, and system monitoring. Experienced in building responsive web applications using React, JavaScript, and Tailwind CSS, and deploying projects on Netlify and Vercel. Skilled in Git/GitHub, and following Agile/Scrum practices. Familiar with end-to-end digital transaction flows, application dependencies, and log analysis. Based in Imadol, Lalitpur.
     </p>
 
-    <p class="text-lg text-white font-medium">
-        Skilled in deploying projects on Netlify and Vercel, working with SQL, MongoDB, Git/GitHub, and following Agile/Scrum practices.
-    </p>
-
-    <p class="text-lg text-white font-medium">
-        Based in Imadole, Lalitpur, I deliver clean, maintainable, and impactful digital solutions with strong collaboration skills.
-    </p>
+    
 </div>
 
     </div>
@@ -243,6 +264,13 @@
             <span class="text-white font-semibold"><i class="fab fa-react mr-3 text-teal-400"></i> Frontend</span>
             <span class="text-xs uppercase">
                 React, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Flexbox, CSS Grid
+            </span>
+        </div>
+
+         <div class="skill-tag">
+            <span class="text-white font-semibold"><i class="fas fa-microchip mr-3 text-teal-400"></i> Computer Systems</span>
+            <span class="text-xs uppercase">
+                Networking concepts,System troubleshooting & maintenance, IT support
             </span>
         </div>
 
