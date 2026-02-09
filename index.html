@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d1117;
+            background-color: #050505;
             color: #9ca3af;
             scroll-behavior: smooth;
         }
@@ -106,8 +106,55 @@
   }
 }
 
+.glitter {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #2dd4bf;
+    pointer-events: none;
+    opacity: 0.8;
+    animation: glitter-fade 0.8s linear forwards;
+    z-index: 9998;
+}
+
+@keyframes glitter-fade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+.burst {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #2dd4bf;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: burst 0.7s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes burst {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+
     </style>
 </head>
+<div id="cursor-bubble"></div>
 
 <body>
 
@@ -315,7 +362,7 @@
         </a>
     </div>
 
-    <p class="text-center mt-20 text-xs uppercase tracking-widest">
+    <p class="text-center mt-20 text-xs uppercase tracking-widest border-teal-300">
         © 2026 Shashi Shekhar Pathak
     </p>
 </footer>
@@ -323,6 +370,55 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ once: true, duration: 800 });
+
+    const bubble = document.getElementById("cursor-bubble");
+
+
+document.addEventListener("mousemove", (e) => {
+   
+
+   
+    createGlitter(e.clientX, e.clientY);
+});
+
+function createGlitter(x, y) {
+    const glitter = document.createElement("div");
+    glitter.className = "glitter";
+
+    const offsetX = (Math.random() - 0.5) * 20;
+    const offsetY = (Math.random() - 0.5) * 20;
+
+    glitter.style.left = x + offsetX + "px";
+    glitter.style.top = y + offsetY + "px";
+
+    document.body.appendChild(glitter);
+
+    setTimeout(() => glitter.remove(), 800);
+}
+
+
+document.addEventListener("click", (e) => {
+    for (let i = 0; i < 8; i++) {
+        const burst = document.createElement("div");
+        burst.className = "burst";
+
+        burst.style.left = e.clientX + "px";
+        burst.style.top = e.clientY + "px";
+
+        const angle = Math.random() * 360;
+        const distance = Math.random() * 40 + 20;
+
+        burst.style.transform = `
+            translate(-50%, -50%)
+            rotate(${angle}deg)
+            translate(${distance}px)
+        `;
+
+        document.body.appendChild(burst);
+
+        setTimeout(() => burst.remove(), 700);
+    }
+});
 </script>
 
 </body>
