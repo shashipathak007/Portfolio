@@ -17,6 +17,12 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
+    
+    // Theme Initializer
+    if (localStorage.getItem("theme") === "light") {
+      document.documentElement.classList.add("light-theme");
+    }
+    
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -53,24 +59,68 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 px-5 py-2 text-sm font-semibold rounded-full gradient-border text-accent-400 hover:text-white transition-colors duration-200"
+            href="/CV.pdf"
+            download="Shashi_Shekhar_Pathak_CV.pdf"
+            className="ml-4 px-5 py-2 text-sm font-semibold rounded-full gradient-border text-accent-400 hover:text-white transition-colors duration-200 cursor-pointer"
           >
-            Resume
+            Download CV
           </a>
+          <button
+            onClick={() => {
+              const root = document.documentElement;
+              if (root.classList.contains("light-theme")) {
+                root.classList.remove("light-theme");
+                localStorage.setItem("theme", "dark");
+              } else {
+                root.classList.add("light-theme");
+                localStorage.setItem("theme", "light");
+              }
+            }}
+            className="ml-3 p-2 rounded-full text-slate-400 hover:text-accent-400 border border-slate-600/30 hover:border-accent-400/50 transition-all theme-toggle-btn"
+            aria-label="Toggle Theme"
+          >
+            <span className="theme-icon-sun">
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </span>
+            <span className="theme-icon-moon hidden">
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </span>
+          </button>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-slate-400 hover:text-white transition-colors"
-          aria-label="Toggle mobile menu"
-          id="mobile-menu-toggle"
-        >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile controls */}
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={() => {
+              const root = document.documentElement;
+              if (root.classList.contains("light-theme")) {
+                root.classList.remove("light-theme");
+                localStorage.setItem("theme", "dark");
+              } else {
+                root.classList.add("light-theme");
+                localStorage.setItem("theme", "light");
+              }
+            }}
+            className="p-1.5 rounded-full text-slate-400 hover:text-accent-400 border border-slate-600/30 transition-all theme-toggle-btn"
+            aria-label="Toggle Theme"
+          >
+            <span className="theme-icon-sun">
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </span>
+            <span className="theme-icon-moon hidden">
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </span>
+          </button>
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-slate-400 hover:text-white transition-colors"
+            aria-label="Toggle mobile menu"
+            id="mobile-menu-toggle"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -97,6 +147,16 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
+              <motion.a
+                href="/CV.pdf"
+                download="Shashi_Shekhar_Pathak_CV.pdf"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.05 }}
+                className="mt-4 mx-4 py-3 text-center text-sm font-bold text-dark-950 bg-gradient-to-r from-accent-400 to-violet-400 rounded-lg transition-all"
+              >
+                Download CV
+              </motion.a>
             </div>
           </motion.div>
         )}

@@ -42,7 +42,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
@@ -60,20 +60,43 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-br from-accent-500/20 to-violet-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative rounded-2xl overflow-hidden border border-white/[0.06]">
-                <img
-                  src="/pic.png"
-                  alt="Shashi Shekhar Pathak working"
-                  className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent" />
+              <div className="relative rounded-2xl overflow-hidden glass-card h-80 lg:h-96 flex flex-col">
+                <div className="flex items-center space-x-2 px-4 py-3 border-b border-white/[0.06] bg-dark-900/50">
+                  <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                  <span className="ml-2 text-xs font-mono text-slate-500 hidden sm:block">Developer.jsx</span>
+                </div>
+                <div className="p-5 sm:p-6 font-mono text-sm sm:text-base text-slate-400 overflow-hidden flex-1 relative bg-dark-950/40">
+                  <motion.div 
+                    initial={{ y: 20, opacity: 0 }} 
+                    whileInView={{ y: 0, opacity: 1 }} 
+                    transition={{ delay: 0.3 }}
+                  >
+                    <span className="text-violet-400">const</span> <span className="text-accent-400">Developer</span> <span className="text-violet-400">=</span> () <span className="text-violet-400">{"=>"}</span> {"{"}
+                    <br />
+                    <span className="ml-4 text-slate-500 mt-2 block">{"// Turning ideas into robust apps."}</span>
+                    <span className="ml-4 text-violet-400">return</span> (
+                    <br />
+                    <span className="ml-8 text-slate-300">{"<"}</span><span className="text-rose-400">DigitalWorld</span>
+                    <br />
+                    <span className="ml-12 text-amber-400">focus</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"\"React & UI/UX\""}</span>
+                    <br />
+                    <span className="ml-12 text-amber-400">quality</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"\"High Performance\""}</span>
+                    <br />
+                    <span className="ml-8 text-slate-300">{"/>"}</span>
+                    <br />
+                    <span className="ml-4">);</span>
+                    <br />
+                    {"};"}
+                  </motion.div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -82,7 +105,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-3 space-y-6"
           >
@@ -109,7 +132,7 @@ export default function About() {
               variants={containerVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, margin: "-20px" }}
               className="grid grid-cols-2 gap-3 pt-4"
             >
               {highlights.map((item) => (

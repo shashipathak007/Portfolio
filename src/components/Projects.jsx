@@ -88,7 +88,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-20px" }}
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
@@ -109,7 +109,7 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, margin: "-20px" }}
           className="grid md:grid-cols-2 gap-6 mb-6"
         >
           {projects
@@ -136,37 +136,13 @@ export default function Projects() {
                       )}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-white/[0.04] text-slate-400 hover:text-white hover:bg-white/[0.08] transition-all"
-                        aria-label={`View ${project.title} on GitHub`}
-                      >
-                        <Github size={16} />
-                      </a>
-                    )}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-white/[0.04] text-slate-400 hover:text-white hover:bg-white/[0.08] transition-all"
-                        aria-label={`View ${project.title} live`}
-                      >
-                        <ExternalLink size={16} />
-                      </a>
-                    )}
-                  </div>
                 </div>
 
                 <p className="text-slate-400 text-sm leading-relaxed mb-5">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((t) => (
                     <span
                       key={t}
@@ -175,6 +151,33 @@ export default function Projects() {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-white/[0.04] border border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/50 hover:bg-white/[0.08] transition-all duration-200"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <Github size={14} />
+                      Source
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-accent-500 to-violet-500 text-white shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
+                      aria-label={`View ${project.title} live`}
+                    >
+                      <ExternalLink size={14} />
+                      Live Site
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -185,7 +188,7 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, margin: "-20px" }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {projects
