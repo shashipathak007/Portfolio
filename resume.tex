@@ -1,0 +1,183 @@
+%-------------------------
+% ATS-Friendly Resume - Shashi Shekhar Pathak
+% Font: XCharter (professional, warm, less overused than CM/Times)
+%-------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{XCharter}
+
+\geometry{
+  top=0.36in,
+  bottom=0.36in,
+  left=0.5in,
+  right=0.5in
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue
+}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%---------- HEADER ----------
+\begin{center}
+  {\Huge \textbf{Shashi Shekhar Pathak}} \\[4pt]
+  \small
+  9840287647 \quad $|$ \quad
+  \href{mailto:shashipathak446@gmail.com}{shashipathak446@gmail.com} \quad $|$ \quad
+  \href{https://www.linkedin.com/in/shashi-s-pathak-0a667a337/}{LinkedIn} \quad $|$ \quad
+  \href{https://shashi-shekhar-pathak-portfolio.netlify.app/}{Portfolio} \quad $|$ \quad
+  \href{https://github.com/shashipathak007}{GitHub}
+\end{center}
+
+%---------- SUMMARY ----------
+\section{Summary}
+Frontend Developer specializing in React.js and React Native, with production experience building healthcare,finance and e-commerce platforms. Delivered 4+ deployed projects spanning antenatal care, mental health, and corporate web --- with consistent focus on accessibility, performance, and mobile-first design. Comfortable moving fast in Agile teams and translating ambiguous requirements into clean, maintainable UI.
+
+%---------- SKILLS ----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=1pt]
+  \small{
+    \item \textbf{Languages:} JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL, C
+    \item \textbf{Frameworks \& Libraries:} React.js, React Native, Tailwind CSS, Bootstrap, Expo
+    \item \textbf{Frontend Concepts:} Component-Based Architecture, SPA Development, Responsive Design, Mobile-First Design, Cross-Browser Compatibility, Web Accessibility (WCAG/a11y)
+    \item \textbf{Performance Optimization:} Lazy Loading, Code Splitting, Tree Shaking, Memoization, Render Optimization
+    \item \textbf{API \& State:} REST API Integration, Asynchronous JavaScript (Promises, async/await), JSON Handling
+    \item \textbf{Developer Tools:} Git, GitHub, GitHub Actions, Netlify, Vercel, VS Code, Chrome DevTools
+    \item \textbf{Methods:} Agile/Scrum, Cross-functional Collaboration, UI/UX Implementation
+  }
+\end{itemize}
+\vspace{-4pt}
+
+%---------- EXPERIENCE ----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Frontend Developer Intern}{2026 Feb -- Present}
+    {Citizen Infotech Pvt. Ltd \textnormal{-- Health-tech IT Company}}{Kathmandu, Nepal}
+    \resumeItemListStart
+      \resumeItem{Engineered the complete frontend of \href{https://mothersnest.netlify.app/}{\textbf{Mothers Nest}}, an antenatal care platform serving pregnant women, using React.js and Tailwind CSS with a focus on accessibility and mobile-first design.}
+      \resumeItem{Developing \href{https://github.com/shashipathak007/MotherReadySim}{\textbf{Aama Ready}}, a mobile-based medical procedure simulator game using React Native, improving user engagement through gamified health education.}
+      \resumeItem{Collaborated with cross-functional teams including designers and backend engineers to deliver features on schedule in an Agile sprint environment.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%---------- PROJECTS ----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Mothers Nest Clinic} $|$ \emph{React.js, Tailwind CSS} $|$ \href{https://mothersnest.netlify.app/}{Live Link}}{}
+    \resumeItemListStart
+      \resumeItem{Built a full-featured ANC healthcare platform covering all 9 months of pregnancy with week-by-week guidance, symptom tracking, and personalized health content; architected with 15+ reusable components and lazy loading to minimize initial bundle size.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Aama Ready} $|$ \emph{React Native, TypeScript, Expo} $|$ \href{https://github.com/shashipathak007/MotherReadySim}{GitHub} \textnormal{\textit{(In Progress)}}}{}
+    \resumeItemListStart
+      \resumeItem{Building a gamified mobile maternal health app featuring 60 interactive scenarios across all 3 trimesters, a curated hospital packing checklist of 43 essential items, and an emergency contact guide with 8 critical pre-hospital contacts; designed with simplified UI flows for low-literacy rural users.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Genvest Ventures -- Corporate Website} $|$ \emph{HTML5, Tailwind CSS, JavaScript} $|$ \href{https://genvestpvtltd.netlify.app/}{Live Link}}{}
+    \resumeItemListStart
+      \resumeItem{Delivered a fully responsive multi-page corporate site for a Gen-Z investment startup; achieved consistent layout fidelity across 3 major breakpoints (mobile, tablet, desktop) with pixel-accurate brand implementation.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Mind and Brain -- Counseling Platform} $|$ \emph{HTML5, Tailwind CSS, JavaScript} $|$ \href{https://mindandbrain.netlify.app/}{Live Link}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a mental health platform frontend with WCAG 2.1-aligned accessibility, calm-first UX design, and fully responsive layouts across mobile, tablet, and desktop viewports.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{ShopMe -- E-commerce Web App} $|$ \emph{React.js, Tailwind CSS} $|$ \href{https://shopmeecommerce.netlify.app/}{Live Link}}{}
+    \resumeItemListStart
+      \resumeItem{Built a product browsing and cart management app consuming the FakeStore API; structured with 10+ reusable components, real-time search filtering, and consistent UX across all device breakpoints.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Result Management System} $|$ \emph{HTML, CSS, JavaScript, SQL} $|$ Major Project}{}
+    \resumeItemListStart
+      \resumeItem{Led full-cycle development of a web-based academic result system handling multi-subject grade entry, GPA calculation, and role-based access for admin and student users.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Pharmacy Management System} $|$ \emph{C\#, .NET} $|$ Minor Project}{}
+    \resumeItemListStart
+      \resumeItem{Built an inventory and billing system for pharmacy operations with real-time stock tracking, low-stock alerts, and printable invoice generation.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Bachelor of Engineering in Computer Engineering}{}
+    {National Academy of Science and Technology (NAST) $|$ Pokhara University}{}
+
+\resumeSubHeadingListEnd
+
+\end{document}
