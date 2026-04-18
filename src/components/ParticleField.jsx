@@ -57,7 +57,11 @@ export default function ParticleField() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(148, 163, 184, ${p.opacity})`;
+        // Alternate colors based on index or property
+        const isViolet = p.radius > 1.2;
+        ctx.fillStyle = isViolet 
+          ? `rgba(139, 92, 246, ${p.opacity})` 
+          : `rgba(56, 189, 248, ${p.opacity})`;
         ctx.fill();
       }
 
@@ -71,7 +75,7 @@ export default function ParticleField() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(148, 163, 184, ${0.03 * (1 - dist / 100)})`;
+            ctx.strokeStyle = `rgba(139, 92, 246, ${0.05 * (1 - dist / 100)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
