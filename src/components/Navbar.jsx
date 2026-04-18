@@ -19,7 +19,7 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     // Theme Initializer
-    if (localStorage.getItem("theme") === "light") {
+    if (localStorage.getItem("theme") !== "dark") {
       document.documentElement.classList.add("light-theme");
     }
 

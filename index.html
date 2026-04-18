@@ -11,6 +11,13 @@
     <meta property="og:description" content="Frontend Developer specializing in React.js and React Native, building healthcare and e-commerce platforms." />
     <meta property="og:type" content="website" />
     <title>Shashi Shekhar Pathak | Frontend Developer Portfolio</title>
+    <script>
+      if (localStorage.getItem("theme") !== "dark") {
+        document.documentElement.classList.add("light-theme");
+      } else {
+        document.documentElement.classList.remove("light-theme");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
