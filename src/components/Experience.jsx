@@ -33,7 +33,7 @@ export default function Experience() {
   return (
     <section id="experience" className="relative py-10 lg:py-14">
       {/* Subtle bg accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/50 to-dark-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-dark-950 via-dark-900/50 to-dark-950 pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <motion.div
@@ -55,7 +55,7 @@ export default function Experience() {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-[19px] top-0 bottom-0 w-px bg-gradient-to-b from-accent-500/40 via-violet-500/20 to-transparent hidden md:block" />
+          <div className="absolute left-4.75 top-0 bottom-0 w-px bg-linear-to-b from-accent-500/40 via-violet-500/20 to-transparent hidden md:block" />
 
           {experience.map((exp, idx) => (
             <motion.div
@@ -67,8 +67,8 @@ export default function Experience() {
               className="relative md:pl-14 mb-12 last:mb-0"
             >
               {/* Timeline dot */}
-              <div className="absolute left-[12px] top-2 hidden md:block">
-                <div className="w-[15px] h-[15px] rounded-full border-2 border-accent-400 bg-dark-950">
+              <div className="absolute left-3 top-2 hidden md:block">
+                <div className="w-4 h-4 rounded-full border-2 border-accent-400 bg-dark-950">
                   {exp.current && (
                     <div className="absolute inset-0 rounded-full bg-accent-400/30 animate-ping" />
                   )}
@@ -110,7 +110,7 @@ export default function Experience() {
                 <ul className="space-y-3">
                   {exp.bullets.map((bullet, i) => (
                     <li key={i} className="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                      <span className="mt-2 min-w-[6px] h-[6px] rounded-full bg-accent-400/50" />
+                      <span className="mt-2 min-w-1.5 h-1.5 rounded-full bg-accent-400/50" />
                       <span>{bullet}</span>
                     </li>
                   ))}

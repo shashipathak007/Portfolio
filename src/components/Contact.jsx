@@ -58,11 +58,11 @@ export default function Contact() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(17,24,39,0)_0%,var(--color-dark-950)_100%)] pointer-events-none" />
       
       {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-size-[40px_40px] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Animated glow orbs */}
-      <div className="absolute top-1/2 -left-48 w-[600px] h-[600px] bg-accent-500/5 rounded-full blur-[160px] animate-pulse-slow pointer-events-none" />
-      <div className="absolute bottom-0 -right-48 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-[160px] animate-pulse-slow pointer-events-none" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/2 -left-48 w-150 h-150 bg-accent-500/5 rounded-full blur-[160px] animate-pulse-slow pointer-events-none" />
+      <div className="absolute bottom-0 -right-48 w-150 h-150 bg-violet-500/5 rounded-full blur-[160px] animate-pulse-slow pointer-events-none" style={{ animationDelay: "2s" }} />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -88,7 +88,7 @@ export default function Contact() {
             
             <a
               href="mailto:shashipathak446@gmail.com"
-              className="group relative inline-flex items-center justify-center px-10 py-5 text-base font-bold rounded-2xl bg-gradient-to-r from-accent-500 to-violet-500 text-white shadow-2xl shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-500 hover:-translate-y-1.5 active:scale-95"
+              className="group relative inline-flex items-center justify-center px-10 py-5 text-base font-bold rounded-2xl bg-linear-to-r from-accent-500 to-violet-500 text-white shadow-2xl shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-500 hover:-translate-y-1.5 active:scale-95"
             >
               <span>Drop an Email</span>
               <div className="absolute inset-0 rounded-2xl bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
@@ -110,10 +110,10 @@ export default function Contact() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={`group relative glass-card grow rounded-[2.5rem] p-8 transition-all duration-500 border border-white/[0.05] hover:border-white/20 ${link.glow} hover:shadow-2xl active:scale-[0.98]`}
+                className={`group relative glass-card grow rounded-[2.5rem] p-8 transition-all duration-500 border border-white/5 hover:border-white/20 ${link.glow} hover:shadow-2xl active:scale-[0.98]`}
               >
                 {/* Visual accent */}
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tr-[2.5rem]`} />
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tr-[2.5rem]`} />
                 
                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${link.bg} ${link.color} mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
                   {link.icon}

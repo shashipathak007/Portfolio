@@ -42,7 +42,7 @@ export default function Navbar() {
           <span className="text-xl font-bold tracking-tight text-white">
             <span className="gradient-text">Shashi Shekhar Pathak</span>
           </span>
-          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-accent-400 to-violet-400 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-accent-400 to-violet-400 transition-all duration-300 group-hover:w-full" />
         </a>
 
         {/* Desktop links */}
@@ -54,7 +54,7 @@ export default function Navbar() {
               className="relative px-4 py-2 text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white group"
             >
               {link.label}
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-accent-400 to-violet-400 transition-all duration-300 group-hover:w-3/4 rounded-full" />
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-accent-400 to-violet-400 transition-all duration-300 group-hover:w-3/4 rounded-full" />
             </a>
           ))}
           <a
@@ -130,7 +130,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden nav-blur border-t border-white/[0.06] overflow-hidden"
+            className="md:hidden nav-blur border-t border-white/6 overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-1">
               {navLinks.map((link, i) => (
@@ -141,7 +141,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="py-3 px-4 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/[0.04] rounded-lg transition-all"
+                  className="py-3 px-4 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/4 rounded-lg transition-all"
                 >
                   {link.label}
                 </motion.a>
@@ -152,7 +152,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.05 }}
-                className="mt-4 mx-4 py-3 text-center text-sm font-bold text-dark-950 bg-gradient-to-r from-accent-400 to-violet-400 rounded-lg transition-all"
+                className="mt-4 mx-4 py-3 text-center text-sm font-bold text-dark-950 bg-linear-to-r from-accent-400 to-violet-400 rounded-lg transition-all"
               >
                 Download CV
               </motion.a>

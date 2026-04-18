@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-28 pb-12">
       {/* Background grid effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-size-[64px_64px] pointer-events-none" />
 
       {/* Gradient orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent-500/10 rounded-full blur-[128px] animate-pulse-slow pointer-events-none" />
@@ -61,7 +61,7 @@ export default function Hero() {
               {techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-xs font-medium rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-300 hover:border-accent-400/40 hover:text-accent-400 transition-all duration-200 cursor-default"
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-white/4 border border-white/8 text-slate-300 hover:border-accent-400/40 hover:text-accent-400 transition-all duration-200 cursor-default"
                 >
                   {tech}
                 </span>
@@ -76,7 +76,7 @@ export default function Hero() {
             >
               <a
                 href="#projects"
-                className="w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold rounded-full bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-300 hover:-translate-y-1"
+                className="w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold rounded-full bg-linear-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-300 hover:-translate-y-1"
               >
                 View Projects
                 <ArrowDown size={16} />
@@ -86,7 +86,7 @@ export default function Hero() {
                   href="https://github.com/shashipathak007"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/[0.08] transition-all duration-200"
+                  className="p-3 rounded-full bg-white/4 border border-white/8 text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/8 transition-all duration-200"
                   aria-label="GitHub"
                 >
                   <Github size={20} />
@@ -95,14 +95,14 @@ export default function Hero() {
                   href="https://www.linkedin.com/in/shashi-shekhar-pathak-0a667a337/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/[0.08] transition-all duration-200"
+                  className="p-3 rounded-full bg-white/4 border border-white/8 text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/8 transition-all duration-200"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a
                   href="mailto:shashipathak446@gmail.com"
-                  className="p-3 rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/[0.08] transition-all duration-200"
+                  className="p-3 rounded-full bg-white/4 border border-white/8 text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/8 transition-all duration-200"
                   aria-label="Email"
                 >
                   <Mail size={20} />
@@ -121,10 +121,10 @@ export default function Hero() {
           >
             <div className="relative">
               {/* Orbiting ring */}
-              <div className="absolute inset-[-20px] rounded-full border border-accent-500/15 animate-[spin_20s_linear_infinite]">
+              <div className="absolute -inset-5 rounded-full border border-accent-500/15 animate-[spin_20s_linear_infinite]">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-accent-400 shadow-lg shadow-accent-400/50" />
               </div>
-              <div className="absolute inset-[-45px] rounded-full border border-violet-500/10 animate-[spin_30s_linear_infinite_reverse]">
+              <div className="absolute -inset-11.25 rounded-full border border-violet-500/10 animate-[spin_30s_linear_infinite_reverse]">
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2.5 h-2.5 rounded-full bg-violet-400 shadow-lg shadow-violet-400/50" />
               </div>
 

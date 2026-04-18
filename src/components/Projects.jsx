@@ -82,7 +82,7 @@ const cardVariants = {
 export default function Projects() {
   return (
     <section id="projects" className="relative py-10 lg:py-14">
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <motion.div
@@ -118,11 +118,11 @@ export default function Projects() {
               <motion.div
                 key={project.title}
                 variants={cardVariants}
-                className="group relative glass-card rounded-2xl p-6 sm:p-8 overflow-hidden hover:border-white/[0.12] transition-all duration-500"
+                className="group relative glass-card rounded-2xl p-6 sm:p-8 overflow-hidden hover:border-white/12 transition-all duration-500"
               >
                 {/* Gradient accent line */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  className={`absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 />
 
                 <div className="flex items-start justify-between mb-4">
@@ -146,7 +146,7 @@ export default function Projects() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className={`px-2.5 py-1 text-[11px] font-medium rounded-md bg-white/[0.04] border border-white/[0.06] ${project.accentText}`}
+                      className={`px-2.5 py-1 text-[11px] font-medium rounded-md bg-white/4 border border-white/6 ${project.accentText}`}
                     >
                       {t}
                     </span>
@@ -159,7 +159,7 @@ export default function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-white/[0.04] border border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/50 hover:bg-white/[0.08] transition-all duration-200"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-white/4 border border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/50 hover:bg-white/8 transition-all duration-200"
                       aria-label={`View ${project.title} on GitHub`}
                     >
                       <Github size={14} />
@@ -171,7 +171,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-linear-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
                       aria-label={`View ${project.title} live`}
                     >
                       <ExternalLink size={14} />
@@ -197,10 +197,10 @@ export default function Projects() {
               <motion.div
                 key={project.title}
                 variants={cardVariants}
-                className="group glass-card rounded-xl p-5 hover:border-white/[0.12] transition-all duration-400 relative overflow-hidden"
+                className="group glass-card rounded-xl p-5 hover:border-white/12 transition-all duration-400 relative overflow-hidden"
               >
                 <div
-                  className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  className={`absolute top-0 left-0 right-0 h-px bg-linear-to-r ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 />
 
                 <div className="flex items-start justify-between mb-3">
@@ -217,7 +217,7 @@ export default function Projects() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-0.5 text-[10px] font-medium rounded bg-white/[0.03] text-slate-500"
+                      className="px-2 py-0.5 text-[10px] font-medium rounded bg-white/3 text-slate-500"
                     >
                       {t}
                     </span>
@@ -230,11 +230,11 @@ export default function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold rounded-lg bg-white/[0.04] border border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/50 hover:bg-white/[0.08] transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold rounded-lg bg-white/4 border border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/50 hover:bg-white/8 transition-all duration-200"
                       aria-label={`View ${project.title} on GitHub`}
                     >
                       <Github size={12} />
-                      Source
+                      Source Code
                     </a>
                   )}
                   {project.liveUrl && (
@@ -242,7 +242,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold rounded-lg bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold rounded-lg bg-linear-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
                       aria-label={`View ${project.title} live`}
                     >
                       <ExternalLink size={12} />

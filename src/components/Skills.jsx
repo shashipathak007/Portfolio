@@ -64,7 +64,7 @@ const cardVariants = {
 export default function Skills() {
   return (
     <section id="skills" className="relative py-10 lg:py-14">
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <motion.div
@@ -94,11 +94,11 @@ export default function Skills() {
             <motion.div
               key={cat.title}
               variants={cardVariants}
-              className="group glass-card rounded-xl p-5 hover:border-white/[0.12] transition-all duration-400 relative overflow-hidden"
+              className="group glass-card rounded-xl p-5 hover:border-white/12 transition-all duration-400 relative overflow-hidden"
             >
               {/* Top gradient line */}
               <div
-                className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${cat.color} opacity-30 group-hover:opacity-100 transition-opacity duration-500`}
+                className={`absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r ${cat.color} opacity-30 group-hover:opacity-100 transition-opacity duration-500`}
               />
 
               <h3 className="text-sm font-bold text-white tracking-wide mb-4 flex items-center gap-2">
@@ -110,7 +110,7 @@ export default function Skills() {
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/[0.03] border border-white/[0.06] text-slate-400 hover:text-white hover:border-white/[0.15] hover:bg-white/[0.06] transition-all duration-200 cursor-default"
+                    className="px-3 py-1.5 text-xs font-medium rounded-lg bg-white/3 border border-white/6 text-slate-400 hover:text-white hover:border-white/15 hover:bg-white/6 transition-all duration-200 cursor-default"
                   >
                     {skill}
                   </span>

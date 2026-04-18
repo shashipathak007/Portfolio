@@ -66,7 +66,7 @@ const codeSnippets = [
       <div className="ml-4 text-slate-500">{"// Beautiful UIs, rapidly built"}</div>
       <div className="ml-4"><span className="text-violet-400">const</span> coreClasses <span className="text-violet-400">=</span> <span className="text-rose-400">Style</span>(</div>
       <div className="ml-8"><span className="text-emerald-400">"flex flex-col items-center"</span>,</div>
-      <div className="ml-8"><span className="text-emerald-400">"bg-gradient-to-r"</span>,</div>
+      <div className="ml-8"><span className="text-emerald-400">"bg-linear-to-r"</span>,</div>
       <div className="ml-8"><span className="text-emerald-400">"overflow-hidden glass-card"</span></div>
       <div className="ml-4">);</div>
       <br />
@@ -161,12 +161,12 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 flex flex-col h-[28rem] lg:h-full"
+            className="lg:col-span-2 flex flex-col h-112 lg:h-full"
           >
             <div className="relative group h-full">
-              <div className="absolute -inset-1 bg-gradient-to-br from-accent-500/20 to-violet-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-1 bg-linear-to-br from-accent-500/20 to-violet-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative rounded-2xl overflow-hidden glass-card h-full flex flex-col">
-                <div className="flex items-center space-x-2 px-4 py-3 border-b border-white/[0.06] bg-dark-900/50 shrink-0">
+                <div className="flex items-center space-x-2 px-4 py-3 border-b border-white/6 bg-dark-900/50 shrink-0">
                   <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
