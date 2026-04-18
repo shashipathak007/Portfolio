@@ -34,7 +34,7 @@ const contactLinks = [
     icon: <Linkedin size={22} />,
     label: "LinkedIn",
     value: "Shashi S Pathak",
-    href: "https://www.linkedin.com/in/shashi-s-pathak-0a667a337/",
+    href: "https://www.linkedin.com/in/shashi-shekhar-pathak-0a667a337/",
     color: "text-sky-400",
     glow: "group-hover:shadow-sky-500/20",
     bg: "bg-sky-500/10",
