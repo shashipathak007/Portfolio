@@ -47,9 +47,9 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.35 }}
               className="text-base sm:text-lg text-slate-400 max-w-lg mb-8 leading-relaxed"
             >
-              <span className="text-white font-semibold">Frontend Developer</span> specializing in{" "}
+              <span className="text-white font-semibold">Software Engineer</span> crafting high-performance digital experiences with{" "}
               <span className="text-accent-400">React.js</span> &{" "}
-              <span className="text-violet-400">React Native</span>, building healthcare, finance &amp; e-commerce platforms with a obsession for performance and mobile-first design.
+              <span className="text-violet-400">React Native</span>. I build scalable, pixel-perfect platforms across healthcare, finance, and e-commerce with a relentless focus on mobile-first design.
             </motion.p>
 
             <motion.div

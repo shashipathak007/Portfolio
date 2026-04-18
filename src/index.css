@@ -32,7 +32,21 @@
   --color-slate-500: #64748b;
 }
 
+:root {
+  --bg-glow-1: rgba(76, 29, 149, 0.15);
+  --bg-glow-2: rgba(14, 165, 233, 0.12);
+  --bg-glow-3: rgba(88, 28, 135, 0.1);
+  --bg-glow-4: rgba(30, 58, 138, 0.1);
+  --bg-glow-5: rgba(8, 1, 24, 0.4);
+}
+
 .light-theme {
+  --bg-glow-1: rgba(139, 92, 246, 0.08);
+  --bg-glow-2: rgba(14, 165, 233, 0.10);
+  --bg-glow-3: rgba(236, 72, 153, 0.07);
+  --bg-glow-4: rgba(52, 211, 153, 0.08);
+  --bg-glow-5: rgba(241, 245, 249, 0.8);
+
   --color-dark-950: #f8fafc;
   --color-dark-900: #f1f5f9;
   --color-dark-800: #e2e8f0;
@@ -80,11 +94,11 @@
   body {
     background-color: var(--color-dark-950);
     background-image: 
-      radial-gradient(at 0% 0%, rgba(76, 29, 149, 0.15) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(88, 28, 135, 0.1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, rgba(30, 58, 138, 0.1) 0px, transparent 50%),
-      radial-gradient(at 50% 50%, rgba(8, 1, 24, 0.4) 0px, transparent 100%);
+      radial-gradient(at 0% 0%, var(--bg-glow-1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, var(--bg-glow-2) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, var(--bg-glow-3) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, var(--bg-glow-4) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, var(--bg-glow-5) 0px, transparent 100%);
     background-attachment: fixed;
     color: var(--color-slate-400);
     font-family: var(--font-sans);
@@ -190,8 +204,9 @@
   }
   
   .light-theme .glass-card {
-    background: rgba(248, 250, 252, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(14, 165, 233, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
   }
   
   .light-theme .nav-blur {

@@ -88,9 +88,8 @@ export default function Contact() {
             
             <a
               href="mailto:shashipathak446@gmail.com"
-              className="group relative inline-flex items-center gap-3 px-10 py-5 text-base font-bold rounded-2xl bg-gradient-to-r from-accent-500 to-violet-500 text-white shadow-2xl shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-500 hover:-translate-y-1.5 active:scale-95"
+              className="group relative inline-flex items-center justify-center px-10 py-5 text-base font-bold rounded-2xl bg-gradient-to-r from-accent-500 to-violet-500 text-white shadow-2xl shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-500 hover:-translate-y-1.5 active:scale-95"
             >
-              <Send size={20} className="group-hover:rotate-12 transition-transform duration-300" />
               <span>Drop an Email</span>
               <div className="absolute inset-0 rounded-2xl bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
             </a>
