@@ -26,7 +26,7 @@ const contactLinks = [
     label: "GitHub",
     value: "shashipathak007",
     href: "https://github.com/shashipathak007",
-    color: "text-slate-200",
+    color: "text-slate-400",
     glow: "group-hover:shadow-slate-400/20",
     bg: "bg-slate-400/10",
   },

@@ -27,8 +27,8 @@ const projects = [
   {
     title: "ShopMe E-commerce",
     description:
-      "Product browsing and cart management app consuming the FakeStore API. Structured with 10+ reusable components, real-time search filtering, and consistent UX across all device breakpoints.",
-    tech: ["React.js", "Tailwind CSS", "REST API"],
+      "Product browsing and cart management app featuring a scalable architecture. Structured with 10+ reusable components, real-time search filtering, and consistent UX across all device breakpoints.",
+    tech: ["React.js", "Tailwind CSS", "Context API"],
     liveUrl: "https://shopmeecommerce.netlify.app/",
     accent: "from-rose-500 to-pink-400",
     accentText: "text-rose-400",
@@ -209,7 +209,7 @@ export default function Projects() {
                   </h3>
                 </div>
 
-                <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3">
+                <p className="text-slate-500 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
 
