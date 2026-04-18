@@ -20,7 +20,7 @@ const highlights = [
   {
     icon: <User size={20} />,
     label: "Focus",
-    value: "React · Mobile-First · a11y",
+    value: "React · Mobile-First · UX",
   },
 ];
 
@@ -36,7 +36,7 @@ const itemVariants = {
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 lg:py-32">
+    <section id="about" className="relative py-10 lg:py-14">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -62,39 +62,43 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 flex flex-col h-[28rem] lg:h-auto"
           >
-            <div className="relative group">
+            <div className="relative group h-full">
               <div className="absolute -inset-1 bg-gradient-to-br from-accent-500/20 to-violet-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative rounded-2xl overflow-hidden glass-card h-80 lg:h-96 flex flex-col">
-                <div className="flex items-center space-x-2 px-4 py-3 border-b border-white/[0.06] bg-dark-900/50">
+              <div className="relative rounded-2xl overflow-hidden glass-card h-full flex flex-col">
+                <div className="flex items-center space-x-2 px-4 py-3 border-b border-white/[0.06] bg-dark-900/50 shrink-0">
                   <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                  <span className="ml-2 text-xs font-mono text-slate-500 hidden sm:block">Developer.jsx</span>
+                  <span className="ml-2 text-xs font-mono text-slate-500 hidden sm:block">Developer.tsx</span>
                 </div>
-                <div className="p-5 sm:p-6 font-mono text-sm sm:text-base text-slate-400 overflow-hidden flex-1 relative bg-dark-950/40">
+                <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm text-slate-400 overflow-hidden flex-1 relative bg-dark-950/40">
                   <motion.div 
                     initial={{ y: 20, opacity: 0 }} 
                     whileInView={{ y: 0, opacity: 1 }} 
                     transition={{ delay: 0.3 }}
+                    className="flex flex-col gap-1"
                   >
-                    <span className="text-violet-400">const</span> <span className="text-accent-400">Developer</span> <span className="text-violet-400">=</span> () <span className="text-violet-400">{"=>"}</span> {"{"}
+                    <div><span className="text-violet-400">import</span> {"{"} <span className="text-rose-400">useState</span>, <span className="text-rose-400">useEffect</span> {"}"} <span className="text-violet-400">from</span> <span className="text-emerald-400">"react"</span>;</div>
+                    <div className="mb-2"><span className="text-violet-400">import</span> {"{"} <span className="text-rose-400">Passion</span> {"}"} <span className="text-violet-400">from</span> <span className="text-emerald-400">"@shashi/core"</span>;</div>
+                    
+                    <div><span className="text-violet-400">export const</span> <span className="text-accent-400">Developer</span> <span className="text-violet-400">=</span> () <span className="text-violet-400">{"=>"}</span> {"{"}</div>
+                    
+                    <div className="ml-4 text-slate-500">{"// Status: Constantly Learning"}</div>
+                    <div className="ml-4"><span className="text-violet-400">const</span> [coffee, setCoffee] <span className="text-violet-400">=</span> <span className="text-rose-400">useState</span>(<span className="text-amber-400">100</span>);</div>
                     <br />
-                    <span className="ml-4 text-slate-500 mt-2 block">{"// Turning ideas into robust apps."}</span>
-                    <span className="ml-4 text-violet-400">return</span> (
-                    <br />
-                    <span className="ml-8 text-slate-300">{"<"}</span><span className="text-rose-400">DigitalWorld</span>
-                    <br />
-                    <span className="ml-12 text-amber-400">focus</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"\"React & UI/UX\""}</span>
-                    <br />
-                    <span className="ml-12 text-amber-400">quality</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"\"High Performance\""}</span>
-                    <br />
-                    <span className="ml-8 text-slate-300">{"/>"}</span>
-                    <br />
-                    <span className="ml-4">);</span>
-                    <br />
-                    {"};"}
+
+                    <div className="ml-4"><span className="text-violet-400">return</span> (</div>
+                    <div className="ml-8 text-slate-300">{"<"}</div>
+                    <div className="ml-12"><span className="text-rose-400">Passion</span></div>
+                    <div className="ml-16"><span className="text-amber-400">stack</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"{['React', 'ReactNative']}"}</span></div>
+                    <div className="ml-16"><span className="text-amber-400">method</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"\"Mobile First\""}</span></div>
+                    <div className="ml-16"><span className="text-amber-400">impact</span><span className="text-violet-400">=</span><span className="text-emerald-400">{"\"High\""}</span></div>
+                    <div className="ml-8 text-slate-300">{"/>"}</div>
+                    <div className="ml-4">);</div>
+                    <div>{"};"}</div>
+                    <div><span className="text-slate-500 animate-pulse">_</span></div>
                   </motion.div>
                 </div>
               </div>

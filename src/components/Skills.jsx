@@ -23,7 +23,6 @@ const skillCategories = [
       "Responsive Design",
       "Mobile-First",
       "Cross-Browser Compat",
-      "WCAG / a11y",
     ],
   },
   {
@@ -64,7 +63,7 @@ const cardVariants = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 lg:py-32">
+    <section id="skills" className="relative py-10 lg:py-14">
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">

@@ -44,6 +44,22 @@
   --color-slate-400: #334155;
   --color-slate-500: #1e293b;
   
+  --color-accent-400: #0284c7;
+  --color-accent-500: #0369a1;
+  --color-accent-600: #075985;
+
+  --color-violet-400: #7c3aed;
+  --color-violet-500: #6d28d9;
+
+  --color-emerald-400: #059669;
+  --color-emerald-500: #047857;
+
+  --color-amber-400: #d97706;
+  --color-amber-500: #b45309;
+
+  --color-rose-400: #e11d48;
+  --color-rose-500: #be123c;
+  
   --text-primary: #0f172a;
 }
 
@@ -127,11 +143,29 @@
 
   .nav-blur {
     backdrop-filter: saturate(180%) blur(20px);
-    background: rgba(3, 7, 18, 0.75);
+    background: rgba(3, 7, 18, 0.85);
   }
 
-  .light-theme .text-white {
+  .light-theme .text-white,
+  .light-theme [class*="hover:text-white"]:hover {
     color: #0f172a !important;
+  }
+  
+  .light-theme .text-slate-300,
+  .light-theme .text-slate-400,
+  .light-theme .text-slate-500,
+  .light-theme [class*="hover:text-slate-"]:hover { 
+    color: #1e293b !important; 
+    font-weight: 600 !important;
+  }
+  .light-theme .section-heading { color: #0f172a !important; }
+  
+  .light-theme [class*="bg-white/"] {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+  }
+  
+  .light-theme [class*="border-white/"] {
+    border-color: rgba(0, 0, 0, 0.08) !important;
   }
   
   .light-theme .glass-card {
@@ -141,6 +175,8 @@
   
   .light-theme .nav-blur {
     background: rgba(255, 255, 255, 0.85);
+    border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
   }
   
   .theme-icon-sun { display: block; }

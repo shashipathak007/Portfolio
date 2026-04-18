@@ -25,13 +25,13 @@ const projects = [
     accentText: "text-violet-400",
   },
   {
-    title: "Genvest Ventures",
+    title: "ShopMe E-commerce",
     description:
-      "Fully responsive multi-page corporate site for a Gen-Z investment startup. Achieved consistent layout fidelity across 3 major breakpoints with pixel-accurate brand implementation.",
-    tech: ["HTML5", "Tailwind CSS", "JavaScript"],
-    liveUrl: "https://genvestpvtltd.netlify.app/",
-    accent: "from-amber-500 to-orange-400",
-    accentText: "text-amber-400",
+      "Product browsing and cart management app consuming the FakeStore API. Structured with 10+ reusable components, real-time search filtering, and consistent UX across all device breakpoints.",
+    tech: ["React.js", "Tailwind CSS", "REST API"],
+    liveUrl: "https://shopmeecommerce.netlify.app/",
+    accent: "from-rose-500 to-pink-400",
+    accentText: "text-rose-400",
   },
   {
     title: "Mind & Brain",
@@ -43,13 +43,13 @@ const projects = [
     accentText: "text-emerald-400",
   },
   {
-    title: "ShopMe E-commerce",
+    title: "Genvest Ventures",
     description:
-      "Product browsing and cart management app consuming the FakeStore API. Structured with 10+ reusable components, real-time search filtering, and consistent UX across all device breakpoints.",
-    tech: ["React.js", "Tailwind CSS", "REST API"],
-    liveUrl: "https://shopmeecommerce.netlify.app/",
-    accent: "from-rose-500 to-pink-400",
-    accentText: "text-rose-400",
+      "Fully responsive multi-page corporate site for a Gen-Z investment startup. Achieved consistent layout fidelity across 3 major breakpoints with pixel-accurate brand implementation.",
+    tech: ["HTML5", "Tailwind CSS", "JavaScript"],
+    liveUrl: "https://genvestpvtltd.netlify.app/",
+    accent: "from-amber-500 to-orange-400",
+    accentText: "text-amber-400",
   },
   {
     title: "Result Management System",
@@ -81,7 +81,7 @@ const cardVariants = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 lg:py-32">
+    <section id="projects" className="relative py-10 lg:py-14">
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
@@ -171,7 +171,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-accent-500 to-violet-500 text-white shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
                       aria-label={`View ${project.title} live`}
                     >
                       <ExternalLink size={14} />
@@ -207,24 +207,13 @@ export default function Projects() {
                   <h3 className="text-base font-bold text-white group-hover:text-white transition-colors">
                     {project.title}
                   </h3>
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-slate-500 hover:text-white transition-colors shrink-0"
-                      aria-label={`Visit ${project.title}`}
-                    >
-                      <ArrowUpRight size={16} />
-                    </a>
-                  )}
                 </div>
 
                 <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.tech.map((t) => (
                     <span
                       key={t}
@@ -233,6 +222,33 @@ export default function Projects() {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2 mt-auto">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold rounded-lg bg-white/[0.04] border border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/50 hover:bg-white/[0.08] transition-all duration-200"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <Github size={12} />
+                      Source
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold rounded-lg bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all duration-300 hover:scale-[1.02]"
+                      aria-label={`View ${project.title} live`}
+                    >
+                      <ExternalLink size={12} />
+                      Live Site
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

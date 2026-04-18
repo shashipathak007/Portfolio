@@ -17,17 +17,7 @@ export default function Footer() {
             </span>
           </div>
 
-          {/* Center — made with */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-1.5 text-xs text-slate-500"
-          >
-            Built with
-            <Heart size={12} className="text-rose-400 fill-rose-400" />
-            using React & Tailwind CSS
-          </motion.p>
+
 
           {/* Right — links */}
           <div className="flex items-center gap-4">
@@ -40,7 +30,7 @@ export default function Footer() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/shashi-s-pathak-0a667a337/"
+              href="https://www.linkedin.com/in/shashi-shekhar-pathak-0a667a337/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-slate-500 hover:text-white transition-colors"

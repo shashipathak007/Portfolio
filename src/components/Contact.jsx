@@ -49,7 +49,7 @@ const itemVariants = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 lg:py-32">
+    <section id="contact" className="relative py-10 lg:py-14">
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/30 to-dark-950 pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">

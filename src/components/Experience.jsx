@@ -31,7 +31,7 @@ const experience = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-24 lg:py-32">
+    <section id="experience" className="relative py-10 lg:py-14">
       {/* Subtle bg accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/50 to-dark-950 pointer-events-none" />
 

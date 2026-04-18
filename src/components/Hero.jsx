@@ -8,13 +8,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background grid effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent-500/10 rounded-full blur-[128px] animate-pulse-slow" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-violet-500/10 rounded-full blur-[128px] animate-pulse-slow" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent-500/10 rounded-full blur-[128px] animate-pulse-slow pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-violet-500/10 rounded-full blur-[128px] animate-pulse-slow pointer-events-none" style={{ animationDelay: "2s" }} />
 
-      <div className="max-w-6xl mx-auto px-6 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left — text */}
           <div className="order-2 lg:order-1">
@@ -76,7 +76,7 @@ export default function Hero() {
             >
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full bg-gradient-to-r from-accent-500 to-violet-500 text-white shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-shadow duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-shadow duration-300"
               >
                 View Projects
                 <ArrowDown size={16} />
@@ -92,7 +92,7 @@ export default function Hero() {
                   <Github size={18} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/shashi-s-pathak-0a667a337/"
+                  href="https://www.linkedin.com/in/shashi-shekhar-pathak-0a667a337/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-400 hover:text-white hover:border-white/20 hover:bg-white/[0.08] transition-all duration-200"
@@ -162,7 +162,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2"
       >
         <span className="text-xs text-slate-500 tracking-widest uppercase">Scroll</span>
         <motion.div

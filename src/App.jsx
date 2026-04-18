@@ -14,9 +14,11 @@ export default function App() {
     <>
       <ParticleField />
       <div className="relative z-10">
-        <Navbar />
-        <Hero />
-        <Marquee />
+        <div>
+          <Navbar />
+          <Hero />
+          <Marquee />
+        </div>
         <About />
         <Experience />
         <Projects />
