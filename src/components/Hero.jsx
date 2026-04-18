@@ -6,7 +6,7 @@ const techStack = ["React.js", "React Native", "TypeScript", "Tailwind CSS", "Ja
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden pt-12 lg:pt-16 pb-12">
+    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-28 pb-12">
       {/* Background grid effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 
@@ -72,16 +72,16 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="flex flex-col sm:flex-row items-center gap-6"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full"
             >
               <a
                 href="#projects"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold rounded-full bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-300 hover:-translate-y-1"
+                className="w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold rounded-full bg-gradient-to-r from-accent-500 to-violet-500 text-slate-50 shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 transition-all duration-300 hover:-translate-y-1"
               >
                 View Projects
                 <ArrowDown size={16} />
               </a>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <a
                   href="https://github.com/shashipathak007"
                   target="_blank"

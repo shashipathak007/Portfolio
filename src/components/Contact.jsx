@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, ArrowUpRight, Send } from "lucide-react";
-import { GithubIcon as Github, LinkedinIcon as Linkedin } from "./Icons";
+import { ArrowUpRight, Send } from "lucide-react";
+import { GithubIcon as Github, LinkedinIcon as Linkedin, MailIconFilled, PhoneIconFilled } from "./Icons";
 
 const contactLinks = [
   {
-    icon: <Mail size={22} />,
+    icon: <MailIconFilled size={22} />,
     label: "Email",
     value: "shashipathak446@gmail.com",
     href: "mailto:shashipathak446@gmail.com",
@@ -13,7 +13,7 @@ const contactLinks = [
     bg: "bg-blue-500/10",
   },
   {
-    icon: <Phone size={22} />,
+    icon: <PhoneIconFilled size={22} />,
     label: "Phone",
     value: "+977 9840287647",
     href: "tel:9840287647",
@@ -73,7 +73,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="sticky top-32"
+            className="lg:sticky lg:top-32 relative"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/10 border border-accent-500/20 text-accent-400 text-xs font-bold uppercase tracking-wider mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse" />
@@ -124,11 +124,11 @@ export default function Contact() {
                   <p className="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">
                     {link.label}
                   </p>
-                  <div className="flex items-center justify-between gap-3">
-                    <p className={`text-base font-bold text-slate-300 group-hover:text-white transition-colors truncate`}>
+                  <div className="flex items-center justify-between gap-3 w-full">
+                    <p className={`text-base font-bold text-slate-300 group-hover:text-white transition-colors truncate flex-1 min-w-0`}>
                       {link.value}
                     </p>
-                    <div className={`p-2 rounded-full bg-white/5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${link.color}`}>
+                    <div className={`shrink-0 p-2 rounded-full bg-white/5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${link.color}`}>
                       <ArrowUpRight size={18} />
                     </div>
                   </div>
